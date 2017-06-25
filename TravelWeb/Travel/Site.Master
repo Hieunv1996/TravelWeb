@@ -1,0 +1,167 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Travel.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Custom Theme files -->
+    <link href="Template/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="Template/css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- //Custom Theme files -->
+    <!-- font-awesome icons -->
+    <link href="Template/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!-- js -->
+    <script src="Template/js/jquery-2.2.3.min.js"></script>
+    <!-- //js -->
+    <!-- web-fonts -->
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+    <!-- //web-fonts -->
+</head>
+<body>
+    <form runat="server">
+        <!-- banner -->
+        <div class="banner about-banner">
+            <div class="header agileinfo-header">
+                <!-- header -->
+                <nav class="navbar navbar-default">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <h1><a href="Default.aspx">Holiday<span> Spot</span></a></h1>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-left">
+                                <li><a href="Tour.aspx" class="btn w3ls-hover">Tours</a></li>
+                                <li><a href="News.aspx" class="btn w3ls-hover">Tin tức</a></li>
+                                <li><a href="About.aspx" class="btn w3ls-hover">Giới thiệu</a></li>
+                                <li><a href="Contact.aspx" class="btn w3ls-hover">Liên hệ</a></li>
+                                <li>
+                                    <%if (Session["KhachHang_Login"] == null)
+                                        {%>
+                                    <a href="Login.aspx" class="btn w3ls-hover">Đăng nhập</a>
+                                    <%}
+                                    else
+                                    { %>
+                                    <a href="Account.aspx" class="btn w3ls-hover">Tài khoản</a>
+                                    <%} %>
+                                </li>
+                            </ul>
+                            <div class="social-icon">
+                                <a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="#" class="social-button google"><i class="fa fa-google-plus"></i></a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- //navbar-collapse -->
+                    </div>
+                    <!-- //container-fluid -->
+                </nav>
+            </div>
+            <!-- //header -->
+        </div>
+        <!-- //banner -->
+        <!-- slid -->
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- footer start here -->
+        <div class="footer-agile">
+            <div class="container">
+                <div class="footer-agileinfo">
+                    <div class="col-md-5 col-sm-5 footer-wthree-grid">
+                        <div class="agileits-w3layouts-tweets">
+                            <h5><a href="index.html">Holiday Spot, Inc.</a></h5>
+                            <div class="social-icon footerw3ls">
+                                <a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="#" class="social-button google"><i class="fa fa-google-plus"></i></a>
+                            </div>
+                        </div>
+                        <p>Chúng tôi là đơn vị cung cấp các dịch vụ và tour du lịch hàng đầu, các dịch vụ khách sạn, ăn uống trên toàn quốc. </p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 footer-wthree-grid">
+                        <h3>Liên kết</h3>
+                        <ul>
+                            <li><a href="Default.aspx"><span class="glyphicon glyphicon-menu-right"></span>Home</a></li>
+                            <li><a href="Tour.aspx"><span class="glyphicon glyphicon-menu-right"></span>Tours</a></li>
+                            <li><a href="News.aspx"><span class="glyphicon glyphicon-menu-right"></span>Tin tức</a></li>
+                            <li><a href="About.aspx"><span class="glyphicon glyphicon-menu-right"></span>Giới thiệu</a></li>
+                            <li><a href="Contact.aspx"><span class="glyphicon glyphicon-menu-right"></span>Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-4 footer-wthree-grid">
+                        <h3>Liên hệ</h3>
+                        <ul>
+                            <li>235 Hoàng Quốc Việt</li>
+                            <li>Từ Liêm, Hà Nội</li>
+                            <li>Phone: +84 xxx xxx xxx</li>
+                            <li><a href="mailto:info@example.com">contact@example.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="copy-right">
+                    <p>Copyright © 2017 Holiday Spot . All rights reserved | Design by <a href="https://www.facebook.com/nhok.heo.11061996">Xuân Chiều.</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- //footer end here -->
+
+        <!-- start-smooth-scrolling -->
+        <script type="text/javascript" src="Template/js/move-top.js"></script>
+        <script type="text/javascript" src="Template/js/easing.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                $(".scroll").click(function (event) {
+                    event.preventDefault();
+
+                    $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+                });
+            });
+        </script>
+        <!-- //end-smooth-scrolling -->
+        <!-- smooth-scrolling-of-move-up -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                /*
+                var defaults = {
+                    containerID: 'toTop', // fading element id
+                    containerHoverID: 'toTopHover', // fading element hover id
+                    scrollSpeed: 1200,
+                    easingType: 'linear' 
+                };
+                */
+
+                $().UItoTop({ easingType: 'easeOutQuart' });
+
+            });
+        </script>
+        <!-- //smooth-scrolling-of-move-up -->
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="Template/js/bootstrap.js"></script>
+
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,9 @@
+D:\EPU\asp\DuLich\TravelWeb\Travel.Bussiness\bin\Debug\Travel.Bussiness.dll
+D:\EPU\asp\DuLich\TravelWeb\Travel.Bussiness\bin\Debug\Travel.Bussiness.pdb
+D:\EPU\asp\DuLich\TravelWeb\Travel.Bussiness\bin\Debug\Travel.Data.dll
+D:\EPU\asp\DuLich\TravelWeb\Travel.Bussiness\bin\Debug\Travel.Entities.dll
+D:\EPU\asp\DuLich\TravelWeb\Travel.Bussiness\bin\Debug\Travel.Data.pdb
+D:\EPU\asp\DuLich\TravelWeb\Travel.Bussiness\bin\Debug\Travel.Entities.pdb
+D:\EPU\asp\DuLich\TravelWeb\Travel.Bussiness\obj\Debug\Travel.Bussiness.csprojResolveAssemblyReference.cache
+D:\EPU\asp\DuLich\TravelWeb\Travel.Bussiness\obj\Debug\Travel.Bussiness.dll
+D:\EPU\asp\DuLich\TravelWeb\Travel.Bussiness\obj\Debug\Travel.Bussiness.pdb
